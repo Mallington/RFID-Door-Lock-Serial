@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="516.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rfid.door.lock.serial.MainUIController">
+   <children>
+      <HBox alignment="CENTER" layoutX="117.0" layoutY="86.0" prefHeight="300.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="0.0" style="-fx-border-color: black; -fx-border-width: 3;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tools">
+                     <font>
+                        <Font name="Georgia" size="23.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <VBox alignment="CENTER" prefHeight="358.0" prefWidth="209.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="99.0" prefWidth="211.0" text="Read Card">
+                           <font>
+                              <Font name="Georgia" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="99.0" prefWidth="211.0" text="Duplicate Card" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Github.com/mallington">
+                           <font>
+                              <Font name="Georgia" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="By Mathew Allington">
+                           <font>
+                              <Font name="Georgia" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="236.0" style="-fx-border-color: black; -fx-border-width: 3;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="29.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="PORT_SELECT" prefWidth="150.0" />
+                        <Button fx:id="CONNECT" mnemonicParsing="false" onAction="#connect" prefHeight="28.0" prefWidth="75.0" text="Connect">
+                           <font>
+                              <Font name="Georgia" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="405.0" prefWidth="290.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Output">
+                           <font>
+                              <Font name="Georgia" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextArea fx:id="OUTPUT" editable="false" prefHeight="191.0" prefWidth="0.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Button mnemonicParsing="false" onAction="#clearOutput" prefHeight="27.0" prefWidth="491.0" text="Clear Output" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="STATUS" alignment="TOP_CENTER" editable="false" prefHeight="27.0" prefWidth="59.0" text="Status" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
